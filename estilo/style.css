@@ -42,12 +42,6 @@ a > img:hover {
   border: 1px solid white;
 }
 
-a {
-  max-width: 100%; /* impede que a imagem ultrapasse a largura */
-  height: auto; /* mantém a proporção da imagem */
-  display: block;
-}
-
 .moldura-container {
   margin: 100px 470px;
   width: 311px;
@@ -55,13 +49,14 @@ a {
   background-image: url(../imagens/frame-iphone.png);
 }
 
-.iframe-wrapper {
-  width: 267px;
+.iframe-conteudo {
+  width: 268px;
   height: 473px;
   overflow: hidden;
   position: absolute;
   bottom: 258px;
   left: 492px;
+  overflow-x: hidden;
 }
 
 iframe {
