@@ -3,64 +3,55 @@
   padding: 0;
 }
 
+html body {
+  height: 100dvh;
+  width: 100vw;
+  background-color: black;
+}
+
 body {
-  width: 100dvh;
-  background-image: url(../imagens/fundo-madeira.jpg);
+  background: url(../imagens/fundo-madeira.jpg) no-repeat top center fixed;
   background-size: cover;
-  overflow: hidden;
 }
 
-nav {
-  background-position: right;
+main {
+  height: 100vh;
+  position: relative;
 }
 
-.menu-direita {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+section#telefone {
   position: absolute;
-  right: 10px;
-  top: 0;
-}
-
-a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-a > img {
-  border-radius: 100%;
-  width: 60px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-position: right;
-  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.555);
-}
-
-a > img:hover {
-  border: 1px solid white;
-}
-
-.moldura-container {
-  margin: 100px 470px;
-  width: 311px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 627px;
-  background-image: url(../imagens/frame-iphone.png);
+  width: 311px;
+  background: url("../imagens/frame-iphone.png") no-repeat;
 }
 
-.iframe-conteudo {
+iframe#tela {
+  position: relative;
+  top: 80px;
+  left: 22px;
   width: 268px;
-  height: 473px;
-  overflow: hidden;
-  position: absolute;
-  bottom: 258px;
-  left: 492px;
-  overflow-x: hidden;
+  height: 471px;
 }
 
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+section#sociais {
+  text-align: right;
+}
+
+section#sociais img {
+  width: 50px;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.39);
+  box-sizing: border-box;
+}
+
+section#sociais img:hover {
+  border: 1px solid white;
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+  transition: transform 0.4s, border 1s;
 }
